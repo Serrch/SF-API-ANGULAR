@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <div class="card-body shadow text-center p-4">
+      <div class="row featurette align-items-center">
+        <div class="col-md-7 d-flex flex-column justify-content-center align-items-center">
+          <h2 class="featurette-heading fw-normal fs-1">{{ fighter?.nombre }}</h2>
+          <p class="lead">{{ fighter?.historia }}</p>
+          <img [src]="fighter?.icono" class="my-3 img-logo" alt="{{ fighter?.nombre }}">
+        </div>
+        <div class="col-md-5">
+          <img [src]="fighter?.img" class="img-fluid m-2 me-3" alt="{{ fighter?.nombre }}">
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-around align-items-around mt-4">
+      <button class="btn btn-warning col-md-3" (click)="updateFighter()">Editar</button>
+      <button class="btn btn-danger col-md-3" (click)="deleteFighter()">Borrar</button>
+    </div>
+  </div>
+  

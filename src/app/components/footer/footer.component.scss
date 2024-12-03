@@ -1,0 +1,23 @@
+/* Footer */
+
+.icon-footer{
+    transition: transform .3s ease-out 0s;
+    transition:0.5s;
+}
+
+.icon-footer:hover{
+    transform: scale(1.2);
+    filter: brightness(1.1);
+    color:rgb(255, 253, 127);
+}
+
+.li-secciones{
+    transition: transform .3s ease-out 0s;
+    transition:0.5s;
+}
+
+.li-secciones:hover{
+    color:rgb(255, 253, 127);
+    transform: scale(1.2);
+    filter: brightness(1.1);
+}

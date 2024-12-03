@@ -1,0 +1,19 @@
+<div class="container mb-5">
+    <div class="mt-4 mb-4 border-bottom">
+        <h1>Choose your character</h1>
+    </div>
+    <div class="card-deck card-group  g-3">
+        @for (item of fighterList; track $index){
+            <a href="/fighterDetails/:{{item.id}}">
+            <div class="card fighter-card">
+                <img class="card-img-top" src="{{item.icono}}" alt="Card image">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">{{item.nombre}}</h4>
+                  <p class="card-text">Estilo: {{item.estilo}}</p>
+                </div>
+              </div>
+            </a>
+        }
+    </div>
+    
+</div>

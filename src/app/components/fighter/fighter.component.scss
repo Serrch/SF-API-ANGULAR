@@ -1,0 +1,58 @@
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 0.1rem; 
+    justify-content: center; 
+    padding: 0 1rem; 
+    box-sizing: border-box; 
+}
+
+.fighter-card {
+    position: relative;
+    overflow: hidden;
+    border-color: #3D5A80;
+    transition: transform 0.3s ease-out, border-color 0.5s;
+    color: azure;
+    font-style: oblique;
+    height: 300px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.fighter-card:hover {
+    border-color: #EE6C4D;
+    transform: scale(1.05); 
+    z-index: 2;
+}
+
+.fighter-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s;
+}
+
+.fighter-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.192); 
+    z-index: 1;
+    transition: background 0.5s;
+}
+
+.fighter-card:hover::after {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
